@@ -5,10 +5,10 @@ import tensorflow as tf
 import json
 
 # Load model
-model = tf.keras.models.load_model('dog_breed_identifier/models/dog_breed_model.h5')
+model = tf.keras.models.load_model('models/dog_breed_model.h5')
 
 # Load class indices mapping
-with open('dog_breed_identifier/models/class_indices.json') as f:
+with open('models/class_indices.json') as f:
     class_indices = json.load(f)
 # Reverse the mapping: index -> breed name
 idx_to_breed = {v: k for k, v in class_indices.items()}
